@@ -36,4 +36,4 @@ Chrome requires a https connection to use audio/video. Therefore, you have to in
  
 jqwidgets Non-commercial Licence
 Here is the link according to the licence requirements:
-jqwidgets.com
+http://jqwidgets.com
