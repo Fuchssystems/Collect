@@ -1,0 +1,26 @@
+﻿/*
+	style sheets component Profile
+	colors from http://www.colourlovers.com/palette/17483/dark_system_messages
+padding-left: 80px ;
+*/
+
+/* Correct box margin. Since wakanda v10 box modell has 12px margin */
+.waf-richText {
+	margin: 0px;
+}
+
+.message_send {
+	 color:  #1E72A6;	
+	padding-left: 60px ; 
+	 text-indent: -60px ;	 
+}
+
+.message_received {
+	 color:  #A63232;
+	padding-left: 60px ;
+	 text-indent: -60px ;	 
+}
+
+/*
+padding-left: 80px ;
+*/

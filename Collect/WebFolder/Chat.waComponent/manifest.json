@@ -1,0 +1,1 @@
+﻿{"name":"Chat","html":"Chat.html","scripts":["Chat.js","Chat_functions.js","Localization.js","Chat_Module_functions.js","Chat_Videochat_functions.js","Chat_Filter_functions.js","Chat_WebRTC_functions.js","peer.js"],"styles":["Chat.css"]}

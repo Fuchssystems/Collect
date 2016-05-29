@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html><section data-group="[['dialog_Transaction_Detail','richText_DLOG_Transcation_Title','container5']]">
+    <meta name="generator" content="Wakanda GUIDesigner"/>
+    <meta name="WAF.catalog" content="Webuser,Credit_Transaction"/>
+    <meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="Webuser" data-scope="local" data-lib="WAF" data-initialOrderBy="Name ASC" data-id="{id}webuser" data-dataType="string" data-autoLoad="true" content="webuser"/>
+    <meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="Credit_Transaction" data-scope="local" data-lib="WAF" data-id="{id}credit_Transaction" data-dataType="string" data-autoLoad="false" content="credit_Transaction"/>
+    <meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="{id}webuser.credit_TransactionCollection" data-scope="local" data-lib="WAF" data-initialOrderBy="Date_Time_Entered DESC" data-id="{id}credit_TransactionCollection" data-dataType="string" data-autoLoad="true" content="credit_TransactionCollection"/>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="{id}richText_Title" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="true" data-constraint-left="true" data-autoWidth="true" class="waf-widget waf-richText">Webuser administration</div>	<div id="{id}dataGrid_Webuser" data-type="dataGrid" data-selection-mode="single" data-readOnly="true" data-lib="WAF" data-label-position="top" data-label="" data-header-hide="false" data-footer-text="item(s)" data-footer-hide="true" data-display-error="true" data-constraint-top="true" data-constraint-left="true" data-column="[{'sourceAttID':'Name','colID':'Name','width':'94','title':'Name'},{'sourceAttID':'Creditpoint_Balance','colID':'Creditpoint_Balance','width':'70','title':'Credits'},{'sourceAttID':'EUR_Balance','colID':'EUR_Balance','width':'70','title':'EUR'}]" data-binding="{id}webuser" class="waf-widget waf-dataGrid"></div>
+		<div id="{id}dialog_Transaction_Detail" data-type="dialog" data-modal="true" data-linked-tag="{id}container4,{id}container5" data-lib="WAF" data-hideonload="true" data-hideOnOutsideClick="false" data-front="false" data-draggable="true" data-constraint-top="true" data-constraint-left="true" class="waf-widget waf-dialog waf-container waf-container waf-container waf-container waf-container waf-container">
+	 	<div id="{id}container4" data-type="container" data-lib="WAF" data-label-position="top" data-label="" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-container waf-container-level-1 waf-level-1 waf-widget-header waf-dialog-header">
+	 	 	<div id="{id}richText_DLOG_Transcation_Title" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="false" data-autoWidth="false" class="waf-widget waf-richText waf-dialog-header-title">Dialog Title</div>
+ 	 					</div>
+ 		<div id="{id}container5" data-type="container" data-lib="WAF" data-label-position="top" data-label="" data-context="['protected','allowDrop','allowBind']" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="true" class="waf-widget waf-container waf-widget-body waf-dialog-body waf-container-level-1 waf-level-1">
+	 	 	<input type="text" tabindex="2" id="{id}Transaction_Detail_EUR" data-type="textField" data-readOnly="false" data-password="false" data-multiline="false" data-lib="WAF" data-label-position="left" data-label="Amount EUR" data-datapicker-on="false" data-datapicker-icon-only="false" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-textField"/>
+ 	 		<label id="{id}label1" for="{id}Transaction_Detail_EUR" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" class="waf-widget waf-label waf-label-textfield">Amount EUR</label>
+ 	 		<input type="text" tabindex="3" id="{id}Transaction_Detail_Date_Received" data-type="textField" data-readOnly="false" data-password="false" data-multiline="false" data-lib="WAF" data-label-position="left" data-label="Date received" data-datapicker-on="false" data-datapicker-icon-only="false" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-textField"/>
+ 	 		<label id="{id}label2" for="{id}Transaction_Detail_Date_Received" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" class="waf-widget waf-label waf-label-textfield">Date received</label>
+ 	 		<input value="Paypal" type="text" tabindex="4" id="{id}Transaction_Detail_Account" data-type="textField" data-readOnly="false" data-password="false" data-multiline="false" data-lib="WAF" data-label-position="left" data-label="Account" data-datapicker-on="false" data-datapicker-icon-only="false" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-textField"/>
+ 	 		<label id="{id}label3" for="{id}Transaction_Detail_Account" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" class="waf-widget waf-label waf-label-textfield">Account</label>
+ 	 		<input type="text" tabindex="5" id="{id}Transaction_Detail_Comment" data-type="textField" data-readOnly="false" data-password="false" data-multiline="false" data-lib="WAF" data-label-position="left" data-label="Comment" data-datapicker-on="false" data-datapicker-icon-only="false" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-textField"/>
+ 	 		<label id="{id}label4" for="{id}Transaction_Detail_Comment" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" class="waf-widget waf-label waf-label-textfield">Comment</label>
+ 	 	</div>
+ 		<button tabindex="7" id="{id}button_DLOG_Transaction_Cancel" data-type="button" data-text="Cancel" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-action="simple" class="waf-widget waf-button"></button>
+ 		<button tabindex="6" id="{id}button_DLOG_Transaction_OK" data-type="button" data-text="Save" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-action="simple" class="waf-widget waf-button"></button>
+ 	</div>
+		<button tabindex="1" id="{id}button_Transaction_New" data-type="button" data-text="New transaction" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-left="true" data-action="simple" class="waf-widget waf-button"></button>
+	
+	
+	
+		<div id="{id}dataGrid_Webuser_Transactions" data-type="dataGrid" data-selection-mode="single" data-readOnly="true" data-lib="WAF" data-label-position="top" data-label="" data-header-hide="false" data-footer-text="item(s)" data-footer-hide="true" data-display-error="true" data-constraint-top="true" data-constraint-left="true" data-column="[{'sourceAttID':'Date_Time_Entered','colID':'Date_Time_Entered','width':'108','title':'Date_Time_Entered'},{'sourceAttID':'Kind','colID':'Kind','width':'90','title':'Kind'},{'sourceAttID':'EUR','colID':'EUR','format':'%23%230.00','width':'50','title':'EUR'},{'sourceAttID':'Amount_of_Credits','colID':'Amount_of_Credits','width':'90','title':'Amount_of_Credits'},{'sourceAttID':'Account','colID':'Account','width':'150','title':'Account'},{'sourceAttID':'Date_Time_Payment_Received','colID':'Date_Time_Payment_Received','width':'120','title':'Date_Time_Payment_Received'},{'sourceAttID':'Comment','colID':'Comment','width':'150','title':'Comment'}]" data-binding="{id}credit_TransactionCollection" class="waf-widget waf-dataGrid"></div>
+			</section>

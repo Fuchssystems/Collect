@@ -1,0 +1,25 @@
+﻿// custom styles index page
+
+// fix wakanda v9 css problem:
+// add 2px margin, padding
+
+#container_Menu_Main ul {
+	margin: 2px !important;
+}
+#container_Menu_Main li{
+	padding-top: 4px !important;
+	padding-bottom: 4px !important;
+	padding-left: 2px !important;
+	padding-right: 6px !important;
+}
+
+.jqx-item {
+	margin: 2px !important;
+	padding: 2px !important;	
+}
+
+
+
+
+
+

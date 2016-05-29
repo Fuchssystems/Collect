@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><directory>
+	<user name="Superuser" ID="DC305213E361CE4391068CBFD5F28A13" fullName="Super User" password="9124d39810f36d9d2939a29381ca23d0"/>
+	<user name="a" ID="6D24B77039F0114CBB0DC272C2FE8C89" fullName="a" password="1ca920971ffa6c6ec4b79cadc485898c"/>
+	<user name="b" ID="765F98A8ACF2B54EA80BFB20D17EEEC3" fullName="b" password="0f66769e527ede680a1b0747da9c5778"/>
+	<user name="c" ID="D274BAB20D03AB4BA60F88EB8AEF10B5" fullName="c" password="9a4be7e04d987da1b77b2c1302fc7849"/>
+	<user name="d" ID="8F00D42AEF47AC49BE85FAD78D8E032B" fullName="d" password="87666c73b3fa1cff5005aaa4d8b33479"/>
+	<user name="e" ID="0EEA8FE9A5E4F84FA696720BEE269D0E" fullName="e" password="8cebe0fc8482408fe100460a81bf6727"/>
+	<user name="f" ID="A48DCE5CB53BF14C8E76240782ED369C" fullName="f" password="e32ff3e73a744e63b2f1c83cf1eeff61"/>
+	<group name="Admin" ID="01000000000000000000000000000000" fullName="Admin">
+		<include user="Superuser" userID="DC305213E361CE4391068CBFD5F28A13"/>
+	</group>
+	<group name="Webuser" ID="B2798B89DB4EF242AC575EF263DDFEC0" fullName="Webuser">
+		<include user="Superuser" userID="DC305213E361CE4391068CBFD5F28A13"/>
+		<include user="a" userID="6D24B77039F0114CBB0DC272C2FE8C89"/>
+		<include user="b" userID="765F98A8ACF2B54EA80BFB20D17EEEC3"/>
+		<include user="c" userID="D274BAB20D03AB4BA60F88EB8AEF10B5"/>
+		<include user="d" userID="8F00D42AEF47AC49BE85FAD78D8E032B"/>
+		<include user="e" userID="0EEA8FE9A5E4F84FA696720BEE269D0E"/>
+		<include user="f" userID="A48DCE5CB53BF14C8E76240782ED369C"/>
+	</group>
+	<group ID="3335CAF3CA008D4FBC811CA0A7395E9E" name="Admin_Webuser">
+		<include user="a" userID="6D24B77039F0114CBB0DC272C2FE8C89"/>
+		<include user="Superuser" userID="DC305213E361CE4391068CBFD5F28A13"/>
+	</group>
+</directory>

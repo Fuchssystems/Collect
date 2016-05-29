@@ -1,0 +1,184 @@
+// component Chat functions related to WebRTC
+	
+var Web_RTC_stunServer = "stun.l.google.com:19302";
+var Web_RTC_servers = [];
+var Web_RTC_Browser_webkit_Flag = true; // Boolean Flag for browser webkit version
+var WebRTC_Media_constraints = {
+    mandatory: {
+        OfferToReceiveAudio: true,
+        OfferToReceiveVideo: true
+    }
+}; // end var WebRTC_Media_constraints
+var WebRTC_remoteVideo = document.querySelector('#component_Main_video_otherUser');
+ 
+var WebRTC_PeerConnection = null;
+// create RTCPeerConnection	
+var Web_RTC_Peer_Connection_Create = function () {
+	try {
+		Web_RTC_servers = [];
+		Web_RTC_servers.push({'url':'stun:' + Web_RTC_stunServer});
+		var pc_config = {'iceServers':Web_RTC_servers};	  
+	    WebRTC_PeerConnection = new webkitRTCPeerConnection(pc_config);	      
+	    WebRTC_Signal_Change_Console_Log.WebRTC_Signal_Change_Console_Log;
+	    WebRTC_PeerConnection.onicecandidate = WebRTC_onIceCanditate_Webkit;
+	    Web_RTC_Browser_webkit_Flag = true; // Boolean Flag for browser webkit version
+    } // end try
+    catch (e) {
+	    try {
+	    	Web_RTC_servers = {
+		    	iceServers: [
+			        {url: "stun:23.21.150.121"},
+			        {url: "stun:stun.l.google.com:19302"},
+			        {url: "turn:numb.viagenie.ca", credential: "webrtcdemo", username: "louis%40mozilla.com"}
+		   	 	] // end iceServers:
+			}; // end Web_RTC_servers
+			var options = {
+			    optional: [
+			        {DtlsSrtpKeyAgreement: false},
+			        {RtpDataChannels: false}
+			    ] // end optional:
+			}; // ebd var options
+	      WebRTC_PeerConnection = new mozRTCPeerConnection(Web_RTC_servers, options);
+	      WebRTC_PeerConnection.onicecandidate = WebRTC_onIceCanditate_moz;
+	      Web_RTC_Browser_webkit_Flag = false; // Boolean Flag for browser webkit version
+	    } // end try
+	    catch (e) {
+	      alert("Failed to create PeerConnection, exception: " + e.message);
+	    }; // end catch
+	}; // end catch
+
+    WebRTC_PeerConnection.onaddstream = WebRTC_onRemoteStreamAdded;
+    WebRTC_PeerConnection.onremovestream = WebRTC_onRemoteStreamRemoved;
+}; // end var Web_RTC_Peer_Connection_Create
+
+// onIceConditage webkit
+var WebRTC_onIceCanditate_Webkit = function () {
+	alert('WebRTC_onIceCanditate_Webkit');
+}; // end var WebRTC_onIceCanditate_Webkit
+
+// onIceConditage no browser prefix
+var WebRTC_onIceCanditate_moz = function () {
+	alert('WebRTC_onIceCanditate_moz');
+}; // end var WebRTC_onIceCanditate_moz
+
+// onRemoteStreamAdded
+var WebRTC_onRemoteStreamAdded = function (event) {
+	alert('WebRTC_onRemoteStreamAdded');
+	debugger;
+	WebRTC_remoteVideo.src = window.webkitURL.createObjectURL(event.stream);
+}; // end var onRemoteStreamAdded
+
+// onRemoteStramRemoved
+var WebRTC_onRemoteStreamRemoved = function (event) {
+	alert('WebRTC_onRemoteStreamRemoved');
+	WebRTC_remoteVideo.src = '';
+}; // end var WebRTC_onRemoteStreamRemoved
+
+// Connect
+var WebRTC_Connect = function () {
+	Web_RTC_Peer_Connection_Create();
+	WebRTC_PeerConnection.addStream(localMediaStream);
+
+	// set status display
+	videochat_current.status = 'videochat_status_WebRTC_Offer_send';
+	$$('component_Main_richtext_Videochat_Status').setValue(gStr_Localized_Get(videochat_current.status, locStr_Char,null,[videochat_current.other_Webuser_Name]));
+
+	// create offer
+	var errorhandler_createOffer = function (error) {
+		alert('Error WebRTC_PeerConnection.createOffer: ' + WebRTC_PeerConnection.createOffer);
+	}; // end var errorhandler_createOffer
+
+	if (!Web_RTC_Browser_webkit_Flag) {
+		WebRTC_PeerConnection.createOffer(WebRTC_setLocalDescription_send_Offer_moz, errorhandler_createOffer, WebRTC_Media_constraints);
+	} // end if Web_RTC_Browser_webkit_Flag
+	else { // Web_RTC_Browser_webkit_Flag
+		var offer = WebRTC_PeerConnection.createOffer(WebRTC_Media_constraints);
+        WebRTC_PeerConnection.setLocalDescription(WebRTC_PeerConnection.SDP_OFFER, offer);
+        	// send message to webworker
+		var obj_to_send = {
+			kind: 'videochat_request_WebRTC_Offer',
+			user_ID: WAF_directory_currentUser,
+			Webuser_ID_to_call: videochat_current.other_Webuser_ID,
+			WebRTC_offer: {type: 'offer', sdp: offer.toSdp()}
+		}; // end var obj_to_send
+		ws.send(JSON.stringify(obj_to_send));
+	    WebRTC_PeerConnection.startIce();
+	}; // end else Web_RTC_Browser_webkit_Flag
+}; // end var WebRTC_Connect
+
+// Peer Connection set local description and send message.
+// mozilla version
+var WebRTC_setLocalDescription_send_Offer_moz = function (sessionDescription) {
+	WebRTC_PeerConnection.setLocalDescription(sessionDescription);
+	// send message to webworker
+	var obj_to_send = {
+		kind: 'videochat_request_WebRTC_Offer',
+		user_ID: WAF_directory_currentUser,
+		Webuser_ID_to_call: videochat_current.other_Webuser_ID,
+		WebRTC_offer: sessionDescription
+	}; // end var obj_to_send
+	ws.send(JSON.stringify(obj_to_send));
+}; // end var WebRTC_setLocalDescription_send_Offer_moz
+
+// functions for called Webuser
+
+// Handler WebRTC offer received
+var ws_Videochat_WebRTC_Offer_received = function (data_received) {
+	videochat_current.status = data_received.Status;
+	$$('component_Main_richtext_Videochat_Status').setValue(gStr_Localized_Get(videochat_current.status, locStr_Char,null,[videochat_current.other_Webuser_Name]));
+	
+	Web_RTC_Peer_Connection_Create();
+	WebRTC_PeerConnection.addStream(localMediaStream);
+	
+	if (Web_RTC_Browser_webkit_Flag) {
+          //set remote description
+          WebRTC_PeerConnection.setRemoteDescription(new RTCSessionDescription(data_received.WebRTC_offer));
+          //create answer
+          WebRTC_PeerConnection.createAnswer(WebRTC_setLocalDescription_send_Message_webkit, null, WebRTC_Media_constraints);
+    } // end if Web_RTC_Browser_webkit_Flag
+    else { // !Web_RTC_Browser_webkit_Flag
+          //set remote description
+          WebRTC_PeerConnection.setRemoteDescription(new mozRTCSessionDescription(data_received.WebRTC_offer),
+          	function() { // callback success
+          		 //create answer
+          		 var errorhandler_createAnswer = function (error) {
+					alert('Error WebRTC_PeerConnection.createAnswer');
+				}; // end var errorhandler_createAnswer
+
+		       	WebRTC_PeerConnection.createAnswer(WebRTC_setLocalDescription_send_Answer_moz, errorhandler_createAnswer, WebRTC_Media_constraints);
+          	}, // end callback success
+          	function() { // callback error
+          		alert('Error WebRTC_PeerConnection.setRemoteDescription');
+          	} // end callback error
+          ); // end .setRemoteDescription()
+     }; // end else !Web_RTC_Browser_webkit_Flag     
+  }; // end var ws_Videochat_WebRTC_Offer_received
+
+// Peer Connection set local description and send message.
+// Version without Browser-prefix
+var WebRTC_setLocalDescription_send_Message_webkit = function () {
+	alert('WebRTC_setLocalDescription_send_Message_webkit');
+	videochat_current.status = 'videochat_status_WebRTC_Offer_answered';
+	$$('component_Main_richtext_Videochat_Status').setValue(gStr_Localized_Get(videochat_current.status, locStr_Char,null,[videochat_current.other_Webuser_Name]));
+
+}; // end var WebRTC_setLocalDescription_send_Message_webkit
+
+var WebRTC_setLocalDescription_send_Answer_moz = function (sessionDescription) {
+	WebRTC_PeerConnection.setLocalDescription(sessionDescription);
+	// send message to webworker
+	var obj_to_send = {
+		kind: 'videochat_request_WebRTC_Answer',
+		user_ID: WAF_directory_currentUser,
+		Webuser_ID_to_call: videochat_current.other_Webuser_ID,
+		WebRTC_sessionDescription = sessionDescription
+	}; // end var obj_to_send
+	ws.send(JSON.stringify(obj_to_send));
+	
+	videochat_current.status = 'videochat_status_WebRTC_Offer_answered';
+	$$('component_Main_richtext_Videochat_Status').setValue(gStr_Localized_Get(videochat_current.status, locStr_Char,null,[videochat_current.other_Webuser_Name]));
+}; // end var WebRTC_setLocalDescription_send_Answer_moz
+
+// console log on signal state change of RTCPeerConnection
+var WebRTC_Signal_Change_Console_Log = function () {
+	console.log('WebRTC_PeerConnection signaling state changed to:', WebRTC_PeerConnection.signalingState)
+}; // end var WebRTC_Signal_Change_Console_Log

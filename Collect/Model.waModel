@@ -1,0 +1,1604 @@
+﻿{
+	"toJSON": true,
+	"extraProperties": {
+		"version": "2",
+		"classes": {
+			"Webuser": {
+				"panelColor": "#fff",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 25,
+						"Y": 20
+					}
+				}
+			},
+			"Company": {
+				"panelColor": "#D88CFF",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 370,
+						"Y": 1355
+					}
+				}
+			},
+			"Pickup": {
+				"panelColor": "#D7E3BC",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 1067,
+						"Y": 771
+					}
+				}
+			},
+			"Chatmessage": {
+				"panelColor": "#C3D69B",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 563,
+						"Y": 38
+					}
+				}
+			},
+			"Credit_Transaction": {
+				"panelColor": "#B8CCE4",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 1077,
+						"Y": 328
+					}
+				}
+			},
+			"User_Documents": {
+				"panelColor": "#D7E3BC",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 631,
+						"Y": 450
+					}
+				}
+			},
+			"Connection": {
+				"panelColor": "#C4BD97",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 1001,
+						"Y": 47
+					}
+				}
+			},
+			"Content": {
+				"panelColor": "#B8CCE4",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 68,
+						"Y": 1555
+					}
+				}
+			},
+			"Send_Email": {
+				"panelColor": "#996699",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 740,
+						"Y": 1257
+					}
+				}
+			},
+			"Test": {
+				"panelColor": "#7F7F7F",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 39,
+						"Y": 1310
+					}
+				}
+			},
+			"PayPalSubmission": {
+				"panelColor": "#548DD4",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 1479,
+						"Y": 39
+					}
+				}
+			},
+			"Webuser_Preference": {
+				"panelColor": "#C3D69B",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 582,
+						"Y": 758
+					}
+				}
+			}
+		},
+		"model": {
+			"scriptMode": "manual",
+			"workspaceLeft": 0,
+			"workspaceTop": 0,
+			"lastScriptLocation": {
+				"Webuser": {
+					"method": "Webuser/Webuser-methods.js",
+					"computed": "Webuser/Webuser-events.js",
+					"events": "Webuser/Webuser-events.js"
+				},
+				"Pickup": {
+					"computed": "Pickup/Pickup-events.js"
+				},
+				"Chatmessage": {
+					"events": "Chatmessage/Chatmessage-events.js",
+					"method": "Chatmessage/Chatmessage-methods.js"
+				},
+				"Credit_Transaction": {
+					"events": "Credit_Transaction/Credit_Transaction-events.js",
+					"method": "Credit_Transaction/Credit_Transaction-methods.js"
+				},
+				"User_Documents": {
+					"method": "User_Documents/User_Documents-methods.js"
+				},
+				"Connection": {
+					"events": "Connection/Connection-events.js",
+					"method": "Connection/Connection-methods.js"
+				},
+				"Content": {
+					"method": "Content/Content-methods.js"
+				},
+				"Send_Email": {
+					"events": "Send_Email/Send_Email-events.js"
+				},
+				"PayPalSubmission": {
+					"events": "PayPalSubmission/PayPalSubmission-events.js",
+					"method": "PayPalSubmission/PayPalSubmission-methods.js"
+				},
+				"Webuser_Preference": {
+					"method": "Webuser_Preference/Webuser_Preference-methods.js",
+					"events": "Webuser_Preference/Webuser_Preference-events.js"
+				}
+			}
+		}
+	},
+	"dataClasses": [
+		{
+			"name": "Chatmessage",
+			"className": "Chatmessage",
+			"collectionName": "ChatmessageCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"indexKind": "btree",
+					"primKey": true
+				},
+				{
+					"name": "Date_Time",
+					"kind": "storage",
+					"scope": "public",
+					"type": "date",
+					"simpleDate": false,
+					"events": [
+						{
+							"kind": "onInit",
+							"from": "model.Chatmessage.Date_Time.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "model.Chatmessage.Date_Time.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Chatmessage.Date_Time.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Chatmessage.Date_Time.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Chatmessage.Date_Time.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Chatmessage.Date_Time.events.onInit",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "Messagetext",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "credit_TransactionCollection",
+					"kind": "relatedEntities",
+					"scope": "public",
+					"type": "Credit_TransactionCollection",
+					"reversePath": true,
+					"path": "Chatmessage"
+				},
+				{
+					"name": "Webuser_Sender",
+					"kind": "relatedEntity",
+					"scope": "public",
+					"type": "Webuser",
+					"path": "Webuser"
+				},
+				{
+					"name": "Webuser_Receiver",
+					"kind": "relatedEntity",
+					"scope": "public",
+					"type": "Webuser",
+					"path": "Webuser"
+				},
+				{
+					"name": "Read_by_Receiver",
+					"kind": "storage",
+					"scope": "public",
+					"type": "bool",
+					"events": [
+						{
+							"kind": "onInit",
+							"from": "model.Chatmessage.Read_by_Receiver.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Chatmessage.Read_by_Receiver.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Chatmessage.Read_by_Receiver.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Chatmessage.Read_by_Receiver.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Chatmessage.Read_by_Receiver.events.onInit",
+							"userDefined": true
+						}
+					]
+				}
+			],
+			"methods": [
+				{
+					"name": "Message_New",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.Chatmessage.methods.Message_New",
+					"userDefined": true
+				},
+				{
+					"name": "Messages_Userpair_Load_HTML",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.Chatmessage.methods.Messages_Userpair_Load_HTML",
+					"userDefined": true
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"className": "Company",
+			"collectionName": "CompanyCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"indexKind": "btree",
+					"primKey": true
+				},
+				{
+					"name": "Company_Name",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Person_1",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Street",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Postalcode",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "City",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Phone_1",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Phone_2",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "email",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Comments",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "pickupCollection",
+					"kind": "relatedEntities",
+					"scope": "public",
+					"type": "PickupCollection",
+					"reversePath": true,
+					"path": "Company"
+				}
+			]
+		},
+		{
+			"name": "Connection",
+			"className": "Connection",
+			"collectionName": "ConnectionCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"indexKind": "btree",
+					"primKey": true
+				},
+				{
+					"name": "Webuser_ID_Lower",
+					"kind": "storage",
+					"scope": "public",
+					"type": "uuid"
+				},
+				{
+					"name": "Webuser_ID_Higher",
+					"kind": "storage",
+					"scope": "public",
+					"type": "uuid"
+				},
+				{
+					"name": "Status",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string",
+					"events": [
+						{
+							"kind": "onInit",
+							"from": "model.Connection.Status.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Connection.Status.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Connection.Status.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Connection.Status.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Connection.Status.events.onInit",
+							"userDefined": true
+						}
+					]
+				}
+			],
+			"methods": [
+				{
+					"name": "Load_Create",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.Connection.methods.Load_Create",
+					"userDefined": true
+				}
+			]
+		},
+		{
+			"name": "Content",
+			"className": "Content",
+			"collectionName": "ContentCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "Name",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Language",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Text",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				}
+			],
+			"methods": [
+				{
+					"name": "Load_Name_Language",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.Content.methods.Load_Name_Language",
+					"userDefined": true
+				}
+			]
+		},
+		{
+			"name": "Credit_Transaction",
+			"className": "Credit_Transaction",
+			"collectionName": "Credit_TransactionCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"indexKind": "btree",
+					"primKey": true
+				},
+				{
+					"name": "Kind",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Chatmessage",
+					"kind": "relatedEntity",
+					"scope": "public",
+					"type": "Chatmessage",
+					"path": "Chatmessage"
+				},
+				{
+					"name": "Date_Time_Entered",
+					"kind": "storage",
+					"scope": "public",
+					"type": "date",
+					"simpleDate": false
+				},
+				{
+					"name": "Webuser",
+					"kind": "relatedEntity",
+					"scope": "public",
+					"type": "Webuser",
+					"path": "Webuser"
+				},
+				{
+					"name": "Authorized_by_Webuser",
+					"kind": "relatedEntity",
+					"scope": "public",
+					"type": "Webuser",
+					"path": "Webuser"
+				},
+				{
+					"name": "Amount_of_Credits",
+					"kind": "storage",
+					"scope": "public",
+					"type": "number"
+				},
+				{
+					"name": "Account",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Comment",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "EUR",
+					"kind": "storage",
+					"scope": "public",
+					"type": "number"
+				},
+				{
+					"name": "Date_Time_Payment_Received",
+					"kind": "storage",
+					"scope": "public",
+					"type": "date",
+					"simpleDate": false
+				}
+			],
+			"methods": [
+				{
+					"name": "Transaction_New",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.Credit_Transaction.methods.Transaction_New",
+					"userDefined": true
+				},
+				{
+					"name": "Transactions_Webuser_Load",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.Credit_Transaction.methods.Transactions_Webuser_Load",
+					"userDefined": true
+				}
+			]
+		},
+		{
+			"name": "PayPalSubmission",
+			"className": "PayPalSubmission",
+			"collectionName": "PayPalSubmissionCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "Date_Time_Send",
+					"kind": "storage",
+					"scope": "public",
+					"type": "date",
+					"simpleDate": false,
+					"events": [
+						{
+							"kind": "init",
+							"from": "$mainModel.PayPalSubmission.Date_Time_Send.events.init"
+						},
+						{
+							"kind": "init",
+							"from": "$mainModel.PayPalSubmission.Date_Time_Send.events.init"
+						},
+						{
+							"kind": "init",
+							"from": "$mainModel.PayPalSubmission.Date_Time_Send.events.init",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "Kind",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Webuser",
+					"kind": "relatedEntity",
+					"scope": "public",
+					"type": "Webuser",
+					"path": "Webuser"
+				},
+				{
+					"name": "Amount_EUR_Submitted",
+					"kind": "storage",
+					"scope": "public",
+					"type": "number"
+				},
+				{
+					"name": "UUID",
+					"kind": "storage",
+					"scope": "public",
+					"autogenerate": true,
+					"type": "uuid"
+				},
+				{
+					"name": "Amount_EUR_Received",
+					"kind": "storage",
+					"scope": "public",
+					"type": "number"
+				},
+				{
+					"name": "Date_Time_Received",
+					"kind": "storage",
+					"scope": "public",
+					"type": "date",
+					"simpleDate": false
+				}
+			],
+			"methods": [
+				{
+					"name": "Submission_New",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.PayPalSubmission.methods.Submission_New",
+					"userDefined": true
+				},
+				{
+					"name": "Submsions_Webuser_Load",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.PayPalSubmission.methods.Submsions_Webuser_Load",
+					"userDefined": true
+				}
+			]
+		},
+		{
+			"name": "Pickup",
+			"className": "Pickup",
+			"collectionName": "PickupCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"indexKind": "btree",
+					"primKey": true
+				},
+				{
+					"name": "Tyres_Pieces_Total",
+					"kind": "storage",
+					"scope": "public",
+					"type": "long"
+				},
+				{
+					"name": "Tyres_Pieces_with_RIM",
+					"kind": "storage",
+					"scope": "public",
+					"type": "long"
+				},
+				{
+					"name": "Tyres_Pieces_without_RIM",
+					"kind": "calculated",
+					"scope": "public",
+					"type": "long",
+					"scriptKind": "javascript",
+					"onGet": [
+						{
+							"from": "$mainModel.Pickup.Tyres_Pieces_without_RIM.onGet",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "Invoiced_Total_Net",
+					"kind": "storage",
+					"scope": "public",
+					"type": "number"
+				},
+				{
+					"name": "Company",
+					"kind": "relatedEntity",
+					"scope": "public",
+					"type": "Company",
+					"path": "Company"
+				},
+				{
+					"name": "Tyres_Pieces_Best_Total",
+					"kind": "storage",
+					"scope": "public",
+					"type": "long"
+				},
+				{
+					"name": "Tyres_Pieces_Best_in_Pairs",
+					"kind": "storage",
+					"scope": "public",
+					"type": "long"
+				},
+				{
+					"name": "Tyres_Pieces_Best_Singles",
+					"kind": "calculated",
+					"scope": "public",
+					"type": "long",
+					"scriptKind": "javascript",
+					"onGet": [
+						{
+							"from": "$mainModel.Pickup.Tyres_Pieces_Best_Singles.onGet",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "Pickup_Date",
+					"kind": "storage",
+					"scope": "public",
+					"type": "date",
+					"simpleDate": false
+				}
+			]
+		},
+		{
+			"name": "Send_Email",
+			"className": "Send_Email",
+			"collectionName": "Send_EmailCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "Kind",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Date_Send",
+					"kind": "storage",
+					"scope": "public",
+					"type": "date",
+					"simpleDate": false,
+					"events": [
+						{
+							"kind": "onInit",
+							"from": "model.Send_Email.Date_Send.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Send_Email.Date_Send.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Send_Email.Date_Send.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Send_Email.Date_Send.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Send_Email.Date_Send.events.onInit",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "Subject",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Bodytext",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Receiver_email",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Webuser",
+					"kind": "relatedEntity",
+					"scope": "public",
+					"type": "Webuser",
+					"path": "Webuser"
+				}
+			]
+		},
+		{
+			"name": "Test",
+			"className": "Test",
+			"collectionName": "TestCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "Name",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Datum",
+					"kind": "storage",
+					"scope": "public",
+					"type": "date",
+					"simpleDate": false
+				}
+			]
+		},
+		{
+			"name": "User_Documents",
+			"className": "User_Documents",
+			"collectionName": "User_DocumentsCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"indexKind": "btree",
+					"primKey": true
+				},
+				{
+					"name": "Kind",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Picture",
+					"kind": "storage",
+					"scope": "public",
+					"type": "image"
+				},
+				{
+					"name": "Webuser",
+					"kind": "relatedEntity",
+					"scope": "public",
+					"type": "Webuser",
+					"path": "Webuser"
+				},
+				{
+					"name": "Selected_to_Remove",
+					"kind": "storage",
+					"scope": "public",
+					"type": "bool"
+				},
+				{
+					"name": "Main_Picture",
+					"kind": "storage",
+					"scope": "public",
+					"type": "bool"
+				}
+			],
+			"methods": [
+				{
+					"name": "Main_Picture_Set",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.User_Documents.methods.Main_Picture_Set",
+					"userDefined": true
+				},
+				{
+					"name": "Remove_Selected_Entities",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.User_Documents.methods.Remove_Selected_Entities",
+					"userDefined": true
+				}
+			]
+		},
+		{
+			"name": "Webuser",
+			"className": "Webuser",
+			"collectionName": "WebuserCollection",
+			"scope": "public",
+			"publishAsJSGlobal": true,
+			"attributes": [
+				{
+					"name": "Preferences_Language_Shortcut",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Directory_ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"not_null": true,
+					"autosequence": true,
+					"type": "string",
+					"indexKind": "btree",
+					"identifying": true,
+					"primKey": true
+				},
+				{
+					"name": "Program_ID_Last_Used",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Widget_Positions_JSON",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Creditpoint_Balance",
+					"kind": "calculated",
+					"scope": "public",
+					"type": "number",
+					"scriptKind": "javascript",
+					"onGet": [
+						{
+							"from": "$mainModel.Webuser.Creditpoint_Balance.onGet",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "credit_TransactionCollection",
+					"kind": "relatedEntities",
+					"scope": "public",
+					"type": "Credit_TransactionCollection",
+					"reversePath": true,
+					"path": "Webuser"
+				},
+				{
+					"name": "credit_Transaction_Authorized_by_Collection",
+					"kind": "relatedEntities",
+					"scope": "public",
+					"type": "Credit_TransactionCollection",
+					"reversePath": true,
+					"path": "Authorized_by_Webuser"
+				},
+				{
+					"name": "Name",
+					"kind": "calculated",
+					"scope": "public",
+					"type": "string",
+					"scriptKind": "javascript",
+					"onGet": [
+						{
+							"from": "$mainModel.Webuser.Name.onGet",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "EUR_Balance",
+					"kind": "calculated",
+					"scope": "public",
+					"type": "number",
+					"scriptKind": "javascript",
+					"onGet": [
+						{
+							"from": "$mainModel.Webuser.EUR_Balance.onGet",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "Email",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Phone",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Gender",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Date_of_Birth",
+					"kind": "storage",
+					"scope": "public",
+					"type": "date",
+					"simpleDate": false
+				},
+				{
+					"name": "Country_Code",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string",
+					"events": [
+						{
+							"kind": "onInit",
+							"from": "model.Webuser.Country_Code.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "model.Webuser.Country_Code.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.Country_Code.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.Country_Code.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.Country_Code.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.Country_Code.events.onInit",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "Postal_Code",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "City",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "user_DocumentsCollection",
+					"kind": "relatedEntities",
+					"scope": "public",
+					"type": "User_DocumentsCollection",
+					"reversePath": true,
+					"path": "Webuser"
+				},
+				{
+					"name": "No_Chat",
+					"kind": "storage",
+					"scope": "public",
+					"type": "bool",
+					"events": [
+						{
+							"kind": "onInit",
+							"from": "model.Webuser.No_Chat.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.No_Chat.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.No_Chat.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.No_Chat.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.No_Chat.events.onInit",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "Main_Picture_Calculated",
+					"kind": "calculated",
+					"scope": "public",
+					"type": "image",
+					"scriptKind": "javascript",
+					"onGet": [
+						{
+							"from": "$mainModel.Webuser.Main_Picture_Calculated.onGet",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "Is_Online_Calculated",
+					"kind": "calculated",
+					"scope": "public",
+					"type": "bool",
+					"scriptKind": "javascript",
+					"events": [
+						{
+							"kind": "onLoad",
+							"from": "model.Webuser.Is_Online_Calculated.events.onLoad"
+						},
+						{
+							"kind": "onLoad",
+							"from": "$mainModel.Webuser.Is_Online_Calculated.events.onLoad"
+						},
+						{
+							"kind": "onLoad",
+							"from": "$mainModel.Webuser.Is_Online_Calculated.events.onLoad"
+						}
+					],
+					"onGet": [
+						{
+							"from": "$mainModel.Webuser.Is_Online_Calculated.onGet",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "chatmessageCollectionSender",
+					"kind": "relatedEntities",
+					"scope": "public",
+					"type": "ChatmessageCollection",
+					"reversePath": true,
+					"path": "Webuser_Sender"
+				},
+				{
+					"name": "chatmessageCollectionReceiver",
+					"kind": "relatedEntities",
+					"scope": "public",
+					"type": "ChatmessageCollection",
+					"reversePath": true,
+					"path": "Webuser_Receiver"
+				},
+				{
+					"name": "Unread_Messages_Calculated",
+					"kind": "calculated",
+					"scope": "public",
+					"type": "bool",
+					"scriptKind": "javascript",
+					"onGet": [
+						{
+							"from": "$mainModel.Webuser.Unread_Messages_Calculated.onGet",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "Age_in_Years_in_Brackets",
+					"kind": "calculated",
+					"scope": "public",
+					"type": "string",
+					"scriptKind": "javascript",
+					"onGet": [
+						{
+							"from": "$mainModel.Webuser.Age_in_Years_in_Brackets.onGet",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "Country_Code_Postal_Code_Formatted",
+					"kind": "calculated",
+					"scope": "public",
+					"type": "string",
+					"scriptKind": "javascript",
+					"onGet": [
+						{
+							"from": "$mainModel.Webuser.Country_Code_Postal_Code_Formatted.onGet",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "Profile_Deactivated",
+					"kind": "storage",
+					"scope": "public",
+					"type": "bool",
+					"events": [
+						{
+							"kind": "onInit",
+							"from": "model.Webuser.Profile_Deactivated.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.Profile_Deactivated.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.Profile_Deactivated.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.Profile_Deactivated.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.Profile_Deactivated.events.onInit",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "Deleted",
+					"kind": "storage",
+					"scope": "public",
+					"type": "bool",
+					"events": [
+						{
+							"kind": "onInit",
+							"from": "model.Webuser.Deleted.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.Deleted.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.Deleted.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.Deleted.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.Deleted.events.onInit",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "Deleted_Email",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Deleted_Name",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "send_EmailCollection",
+					"kind": "relatedEntities",
+					"scope": "public",
+					"type": "Send_EmailCollection",
+					"reversePath": true,
+					"path": "Webuser"
+				},
+				{
+					"name": "Registration_Pending",
+					"kind": "storage",
+					"scope": "public",
+					"type": "bool",
+					"events": [
+						{
+							"kind": "onInit",
+							"from": "model.Webuser.Registration_Pending.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.Registration_Pending.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.Registration_Pending.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.Registration_Pending.events.onInit"
+						},
+						{
+							"kind": "onInit",
+							"from": "$mainModel.Webuser.Registration_Pending.events.onInit",
+							"userDefined": true
+						}
+					]
+				},
+				{
+					"name": "payPalSubmissionCollection",
+					"kind": "relatedEntities",
+					"scope": "public",
+					"type": "PayPalSubmissionCollection",
+					"reversePath": true,
+					"path": "Webuser"
+				},
+				{
+					"name": "Videochat_Activated",
+					"kind": "storage",
+					"matchColumn": "Videochat_Participation",
+					"scope": "public",
+					"type": "bool"
+				},
+				{
+					"name": "webuser_PreferenceCollection",
+					"kind": "relatedEntities",
+					"scope": "public",
+					"type": "Webuser_PreferenceCollection",
+					"reversePath": true,
+					"path": "Webuser"
+				},
+				{
+					"name": "Address_Coordinates_Lattidude",
+					"kind": "storage",
+					"scope": "public",
+					"type": "number"
+				},
+				{
+					"name": "Address_Coordinates_Longitude",
+					"kind": "storage",
+					"scope": "public",
+					"type": "number"
+				},
+				{
+					"name": "Distance_to_Current_Webuser_String_Calculated",
+					"kind": "calculated",
+					"scope": "public",
+					"type": "string",
+					"scriptKind": "javascript",
+					"onGet": [
+						{
+							"from": "$mainModel.Webuser.Distance_to_Current_Webuser_String_Calculated.onGet",
+							"userDefined": true
+						}
+					]
+				}
+			],
+			"events": [
+				{
+					"kind": "onRemove",
+					"from": "model.Webuser.events.onRemove"
+				},
+				{
+					"kind": "onRemove",
+					"from": "$mainModel.Webuser.events.onRemove"
+				},
+				{
+					"kind": "onRemove",
+					"from": "$mainModel.Webuser.events.onRemove"
+				},
+				{
+					"kind": "onRemove",
+					"from": "$mainModel.Webuser.events.onRemove"
+				},
+				{
+					"kind": "onRemove",
+					"from": "$mainModel.Webuser.events.onRemove",
+					"userDefined": true
+				}
+			],
+			"methods": [
+				{
+					"name": "Chat_Other_Members_Load",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.Webuser.methods.Chat_Other_Members_Load",
+					"userDefined": true
+				},
+				{
+					"name": "Confirm_Registration",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.Webuser.methods.Confirm_Registration",
+					"userDefined": true
+				},
+				{
+					"name": "Modify_Contact_Details",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.Webuser.methods.Modify_Contact_Details",
+					"userDefined": true
+				},
+				{
+					"name": "Modify_Login_Details",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.Webuser.methods.Modify_Login_Details",
+					"userDefined": true
+				},
+				{
+					"name": "On_Uploaded_Pictures",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.Webuser.methods.On_Uploaded_Pictures",
+					"userDefined": true
+				},
+				{
+					"name": "Preferences_Load",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.Webuser.methods.Preferences_Load",
+					"userDefined": true
+				},
+				{
+					"name": "Registraion_Confirm_emai_resend",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "model.Webuser.methods.Registraion_Confirm_emai_resend"
+				},
+				{
+					"name": "Registraion_Confirm_email_resend",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.Webuser.methods.Registraion_Confirm_email_resend",
+					"userDefined": true
+				},
+				{
+					"name": "User_Profile_Geocoordinates_Modify",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.Webuser.methods.User_Profile_Geocoordinates_Modify",
+					"userDefined": true
+				},
+				{
+					"name": "User_Profile_Remove_by_User",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.Webuser.methods.User_Profile_Remove_by_User",
+					"userDefined": true
+				},
+				{
+					"name": "User_Register_New",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.Webuser.methods.User_Register_New",
+					"userDefined": true
+				}
+			],
+			"allowOverrideStamp": true
+		},
+		{
+			"name": "Webuser_Preference",
+			"className": "Webuser_Preference",
+			"collectionName": "Webuser_PreferenceCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "Webuser",
+					"kind": "relatedEntity",
+					"scope": "public",
+					"type": "Webuser",
+					"path": "Webuser"
+				},
+				{
+					"name": "Chatfilter_Gender_Female",
+					"kind": "storage",
+					"scope": "public",
+					"type": "bool"
+				},
+				{
+					"name": "Chatfilter_Gender_Male",
+					"kind": "storage",
+					"scope": "public",
+					"type": "bool"
+				},
+				{
+					"name": "Chatfilter_Gender_Undetermined",
+					"kind": "storage",
+					"scope": "public",
+					"type": "bool"
+				},
+				{
+					"name": "Chatfilter_Unread_Messages",
+					"kind": "storage",
+					"scope": "public",
+					"type": "bool"
+				},
+				{
+					"name": "Chatfilter_Online",
+					"kind": "storage",
+					"scope": "public",
+					"type": "bool"
+				},
+				{
+					"name": "Chatfilter_Webcam",
+					"kind": "storage",
+					"scope": "public",
+					"type": "bool"
+				},
+				{
+					"name": "Chatfilter_Age_Years_Minimum",
+					"kind": "storage",
+					"scope": "public",
+					"type": "long"
+				},
+				{
+					"name": "Chatfilter_Age_Years_Maximum",
+					"kind": "storage",
+					"scope": "public",
+					"type": "long"
+				},
+				{
+					"name": "Chatfilter_Distance",
+					"kind": "storage",
+					"scope": "public",
+					"type": "long",
+					"events": [
+						{
+							"kind": "load",
+							"from": "$mainModel.Webuser_Preference.Chatfilter_Distance.events.load",
+							"userDefined": true
+						}
+					]
+				}
+			],
+			"methods": [
+				{
+					"name": "Load_Preference_Current_Webuser",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "$mainModel.Webuser_Preference.methods.Load_Preference_Current_Webuser",
+					"userDefined": true
+				}
+			]
+		}
+	]
+}

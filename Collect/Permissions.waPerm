@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><permissions>
+	<allow action="upload" groupName="Webuser" groupID="B2798B89DB4EF242AC575EF263DDFEC0" resource="upload" temporaryForcePermissions="false" type="service"/>
+	<allow type="module" resource="Chat_Module" action="executeFromClient"/>
+</permissions>

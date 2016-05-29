@@ -1,0 +1,1 @@
+﻿{"name":"Collect/Test.waComponent","version":"1.0.0","webComponent":"Test.waComponent/Test.js","loadDependencies":[{"id":"Widget/richText","type":"widget"},{"id":"Test.waComponent/Test.html","path":"WEBFOLDER","type":"html"},{"id":"Test.waComponent/Test.css","path":"WEBFOLDER","type":"style"},{"id":"Test.waComponent/Test.js","path":"WEBFOLDER","type":"script"}]}
